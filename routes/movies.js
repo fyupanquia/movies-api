@@ -12,7 +12,6 @@ const validationHandler = require('../utils/middleware/validationHandler');
 const cacheResponse = require('../utils/cacheResponse');
 const {
   FIVE_MINUTES_IN_SECONDS,
-  SIXTY_MINUTES_IN_SECONDS
 } = require('../utils/time');
 
 

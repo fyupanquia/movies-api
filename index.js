@@ -13,7 +13,9 @@ const {
 } = require('./utils/middleware/errorHandlers.js');
 const notFoundHandler = require('./utils/middleware/notFoundHandler');
 
-const moviesAPI = require("./routes/movies")
+const authApi = require('./routes/auth');
+const moviesAPI = require('./routes/movies');
+const userMoviesApi = require('./routes/userMovies');
 const bodyParser = require('body-parser');
 //const morgan = require("morgan")
 /*
@@ -27,13 +29,13 @@ app.get('/json', function(req, res) {
 */
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false }));
-
+app.use(bodyParser.urlencoded({ extended: false }));
 
 //app.use(morgan('combined', { stream: accessLogStream }))
 
-
-moviesAPI(app)
+authApi(app);
+moviesAPI(app);
+userMoviesApi(app);
 
 // Catch 404
 app.use(notFoundHandler);
