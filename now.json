@@ -16,6 +16,11 @@
     "DB_USER": "@pvideos-db-user",
     "DB_PASSWORD": "@pvideos-db-password",
     "DB_HOST": "@pvideos-db-host",
-    "DB_NAME": "@pvideos-db-name"
+    "DB_NAME": "@pvideos-db-name",
+    "DEFAULT_ADMIN_PASSWORD": "@pvideos-default-admin-password",
+    "DEFAULT_USER_PASSWORD": "@pvideos-default-user-password",
+    "AUTH_JWT_SECRET": "@pvideos-auth-jwt-secret",
+    "PUBLIC_API_KEY_TOKEN": "@pvideos-public-api-key-token",
+    "ADMIN_API_KEY_TOKEN": "@pvideos-admin-api-key-token"
   }
 }

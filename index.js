@@ -1,6 +1,7 @@
 //const fs = require('fs');
 //const path = require('path')
 const express = require('express');
+const helmet = require('helmet');
 const app = express();
 
 const { config } = require('./config/index');
@@ -29,6 +30,7 @@ app.get('/json', function(req, res) {
 */
 
 app.use(bodyParser.json());
+app.use(helmet());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 //app.use(morgan('combined', { stream: accessLogStream }))
